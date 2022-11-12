@@ -23,6 +23,9 @@ body{
     margin: auto;
     width: 100%;
 }
+section{
+    padding: 4rem 0 3rem;
+}
 
 header{
     position: fixed;
@@ -36,7 +39,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 .logo{
     font-size: 1.1rem;
@@ -45,5 +48,14 @@ header{
 }
 #cart-icon{
     font-size: 1.8rem;
+    color: #d18904;
     cursor: pointer;
+}
+.section-title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.shop{
+    margin-top: 2rem;
 }
