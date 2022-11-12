@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+:root{
+    --main-color: ;
+    --text-color: ;
+    --bg-color: ;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    color: var(--text-color);
+}
