@@ -20,18 +20,36 @@ if (document.readyState == "loading") {
   ready();
 }
 
-// remove items from cart
+// cart functionality
 function ready() {
+  // remove item from cart
   let removeCartButtons = document.getElementsByClassName("cart-remove");
   console.log(removeCartButtons);
   for (let i = 0; i < removeCartButtons.length; i++) {
     const button = removeCartButtons[i];
     button.addEventListener("click", removeCartItem);
   }
+  // change quantity
+  let quantityInputs = document.getElementsByClassName("cart-quantity");
+  for (let i = 0; i < quantityInputs.length; i++) {
+    const input = quantityInputs[i];
+    input.addEventListener("change", quantityChange);
+  }
 }
+
+// remove item from cart
 function removeCartItem(event) {
   let buttonClicked = event.target;
   buttonClicked.parentElement.remove();
+  updateTotal();
+}
+
+// change quantity
+function quantityChanged(event) {
+  let input = event.target;
+  if (isNaN(input.value) || input.value <= 0) {
+    input.value = 1;
+  }
   updateTotal();
 }
 
