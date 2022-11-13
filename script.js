@@ -33,7 +33,7 @@ function ready() {
   let quantityInputs = document.getElementsByClassName("cart-quantity");
   for (let i = 0; i < quantityInputs.length; i++) {
     const input = quantityInputs[i];
-    input.addEventListener("change", quantityChange);
+    input.addEventListener("change", quantityChanged);
   }
 }
 
