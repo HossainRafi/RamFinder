@@ -41,6 +41,19 @@ function ready() {
     const button = addCart[i];
     button.addEventListener("click", addCartClicked);
   }
+  // buy button work
+  document
+    .getElementsByClassName("btn-buy")[0]
+    .addEventListener("click", buyButtonClicked);
+}
+// buy button
+function buyButtonClicked() {
+  alert("Your Order Is Placed");
+  let cartContent = document.getElementsByClassName("cart-content")[0];
+  while (cartContent.hasChildNodes()) {
+    cartContent.removeChild(cartContent.firstChild);
+  }
+  updateTotal();
 }
 
 // remove item from cart
@@ -71,13 +84,32 @@ function addCartClicked(event) {
 }
 function addProductToCart(title, price, productImg) {
   let cartShopBox = document.createEvent("div");
-  // cartShopBox.classList.add('cart-box')
+  cartShopBox.classList.add("cart-box");
   let cartItems = document.getElementsByClassName("cart-content")[0];
   let cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
   for (let i = 0; i < cartItemsNames.length; i++) {
     alert("Product Already Added To Cart");
+    return;
   }
 }
+let cartBoxContent = `
+<img src="${productImg}" class="cart-img">
+<div class="detail-box">
+    <div class="cart-product-title">${title}</div>
+        <div class="cart-price">${price}</div>
+    <input type="number" value="1" min="1" class="cart-quantity" id="">
+</div>
+    <!-- remove cart -->
+    <i class="uil uil-trash-alt cart-remove"></i>
+`;
+cartShopBox.innerHTML = cartBoxContent;
+cartItems.append(cartShopBox);
+cartShopBox
+  .getElementsByClassName("cart-remove")[0]
+  .addEventListener("click", removeCartItem);
+cartShopBox
+  .getElementsByClassName("cart-quantity")[0]
+  .addEventListener("change", quantityChanged);
 
 // update total
 function updateTotal() {
@@ -91,7 +123,7 @@ function updateTotal() {
     let price = parseFloat(priceElement.innerText.replace("$", ""));
     let quantity = quantityElement.value;
     total = total + price * quantity;
-    total = Math.round(total * 100) / 100;
-    document.getElementsByClassName("total-price")[0].innerText = "$" + total;
   }
+  total = Math.round(total * 100) / 100;
+  document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }
