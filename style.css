@@ -11,7 +11,7 @@ img {
   width: 100%;
 }
 body {
-  background-color: whitesmoke;
+  background-color: #b5c3d5;
 }
 .container {
   max-width: 1068px;
@@ -30,7 +30,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: #d1eaea;
+  background: #98abc2;
 }
 .nav {
   display: flex;
@@ -157,7 +157,7 @@ header {
 }
 .product-box {
   border-radius: 10px;
-  background: #ff8c8c;
+  background: #c7cfd9;
 }
 .product-box:hover {
   border: 2px solid var(--text-color);
