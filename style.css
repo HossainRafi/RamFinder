@@ -10,7 +10,7 @@
 :root {
   --main-color: #fd4646;
   --text-color: #171427;
-  --bg-color: #e4e4e4;
+  --bg-color: #ffffff;
 }
 img {
   width: 100%;
@@ -35,8 +35,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background: #bbd8d8;
-  box-shadow: 0 1px 4px hsl(0, 4%, 15% / 10%);
+  background: #d1eaea;
 }
 .nav {
   display: flex;
@@ -46,7 +45,7 @@ header {
 }
 .logo {
   font-size: 1.5rem;
-  color: var(--text-color);
+  color: #000000;
   font-weight: 400;
 }
 #cart-icon {
@@ -61,9 +60,7 @@ header {
   width: 360px;
   min-height: 100vh;
   padding: 20px;
-  background: var(--bg-color);
-  /* background: #bbd8d8; */
-  box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+  background: #e2eded;
   transition: .8s;
 }
 .cart.active{
@@ -100,15 +97,15 @@ header {
   font-weight: 500;
 }
 .cart-quantity {
-  border: 1px solid var(--text-color);
-  outline-color: var(--main-color);
+  border: 1px solid black;
+  outline: none;
   width: 2.4rem;
   text-align: center;
   font-size: 1rem;
 }
 .cart-remove {
   font-size: 25px;
-  color: var(--main-color);
+  color: #ff2c2c;
   cursor: pointer;
 }
 .total {
