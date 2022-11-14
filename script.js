@@ -95,8 +95,7 @@ function addProductToCart(title, price, productImg) {
     alert("Product Already Added To Cart");
     return;
   }
-}
-let cartBoxContent = `
+  let cartBoxContent = `
 <img src="${productImg}" class="cart-img">
 <div class="detail-box">
     <div class="cart-product-title">${title}</div>
@@ -106,14 +105,15 @@ let cartBoxContent = `
     <!-- remove cart -->
     <i class="uil uil-trash-alt cart-remove"></i>
 `;
-cartShopBox.innerHTML = cartBoxContent;
-cartItems.append(cartShopBox);
-cartShopBox
-  .getElementsByClassName("cart-remove")[0]
-  .addEventListener("click", removeCartItem);
-cartShopBox
-  .getElementsByClassName("cart-quantity")[0]
-  .addEventListener("change", quantityChanged);
+  cartShopBox.innerHTML = cartBoxContent;
+  cartItems.append(cartShopBox);
+  cartShopBox
+    .getElementsByClassName("cart-remove")[0]
+    .addEventListener("click", removeCartItem);
+  cartShopBox
+    .getElementsByClassName("cart-quantity")[0]
+    .addEventListener("change", quantityChanged);
+}
 
 // update total
 function updateTotal() {
