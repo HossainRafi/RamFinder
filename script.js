@@ -29,23 +29,27 @@ function ready() {
     const button = removeCartButtons[i];
     button.addEventListener("click", removeCartItem);
   }
+
   // change quantity
   let quantityInputs = document.getElementsByClassName("cart-quantity");
   for (let i = 0; i < quantityInputs.length; i++) {
     const input = quantityInputs[i];
     input.addEventListener("change", quantityChanged);
   }
+
   // add to cart
   let addCart = document.getElementsByClassName("add-cart");
   for (let i = 0; i < addCart.length; i++) {
-    const button = addCart[i];
+    let button = addCart[i];
     button.addEventListener("click", addCartClicked);
   }
+
   // buy button work
   document
     .getElementsByClassName("btn-buy")[0]
     .addEventListener("click", buyButtonClicked);
 }
+
 // buy button
 function buyButtonClicked() {
   alert("Your Order Is Placed");
@@ -83,7 +87,7 @@ function addCartClicked(event) {
   updateTotal();
 }
 function addProductToCart(title, price, productImg) {
-  let cartShopBox = document.createEvent("div");
+  let cartShopBox = document.createElement("div");
   cartShopBox.classList.add("cart-box");
   let cartItems = document.getElementsByClassName("cart-content")[0];
   let cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
@@ -124,6 +128,7 @@ function updateTotal() {
     let quantity = quantityElement.value;
     total = total + price * quantity;
   }
+
   total = Math.round(total * 100) / 100;
   document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }
