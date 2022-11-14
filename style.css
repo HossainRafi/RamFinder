@@ -10,13 +10,13 @@
 :root {
   --main-color: #fd4646;
   --text-color: #171427;
-  --bg-color: #fff;
+  --bg-color: #e4e4e4;
 }
 img {
   width: 100%;
 }
 body {
-  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 .container {
   max-width: 1068px;
@@ -35,7 +35,6 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  /* background: var(--bg-color); */
   background: #bbd8d8;
   box-shadow: 0 1px 4px hsl(0, 4%, 15% / 10%);
 }
@@ -43,10 +42,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 .logo {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: var(--text-color);
   font-weight: 400;
 }
@@ -62,8 +61,8 @@ header {
   width: 360px;
   min-height: 100vh;
   padding: 20px;
-  /* background: var(--bg-color); */
-  background: #bbd8d8;
+  background: var(--bg-color);
+  /* background: #bbd8d8; */
   box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
   transition: .8s;
 }
