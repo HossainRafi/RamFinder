@@ -163,14 +163,14 @@ header {
   border: 2px solid #91abb7;
   border-radius: 10px;
   background: #d1d9e1;
-  min-height: 400px;
+  min-height: 380px;
   position: relative;
 }
 .product-box:hover {
   box-shadow: 11px 10px 20px -5px rgba(0,0,0,0.62);
 }
 .product-box .img-box{
-  height: 280px;
+  height: 250px;
 }
 .product-img {
   width: 100%;
