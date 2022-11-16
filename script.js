@@ -94,15 +94,6 @@ function addProductToCart(title, price, productImg) {
   cartShopBox.classList.add("cart-box");
   let cartItems = document.getElementsByClassName("cart-content")[0];
   let cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
-  // for (let i = 0; i < cartItemsNames.length; i++) {
-  //   Swal.fire({
-  //     icon: "error",
-  //     title: "Oops...",
-  //     text: "Product Already Added To Cart...!!",
-  //   });
-  //   return;
-  // }
-  // =========================================================
   let titleCheckValue = 0;
   for (let i = 0; i < cartItemsNames.length; i++) {
     if (cartItemsNames[i].innerText == title) {
@@ -117,7 +108,6 @@ function addProductToCart(title, price, productImg) {
     });
     return;
   }
-  // ==========================================================
   let cartBoxContent = `
 <img src="${productImg}" class="cart-img">
 <div class="detail-box">
